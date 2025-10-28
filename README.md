@@ -37,7 +37,7 @@ Sito web professionale per Gabriele Lucesole - Coach Professionista specializzat
 ## 📁 Struttura del Progetto
 
 ```
-elle.gi/
+l.g/
 ├── index.html              # Homepage
 ├── chi-sono.html           # Pagina "Chi sono"
 ├── metodo-efo.html         # Pagina "Metodo EFO®"
@@ -65,7 +65,7 @@ elle.gi/
 
 #### Passo 1: Prepara i File
 
-1. Crea una cartella sul tuo computer chiamata `elle.gi`
+1. Crea una cartella sul tuo computer chiamata `l.g`
 2. Copia tutti i file HTML nella cartella principale
 3. Crea le sottocartelle: `css`, `js`, `images`
 4. Copia i file CSS nella cartella `css`
@@ -76,7 +76,7 @@ elle.gi/
 
 1. Vai su [github.com](https://github.com)
 2. Fai login con il tuo account
-3. Vai al tuo repository `elle.gi`
+3. Vai al tuo repository `l.g`
 
 #### Passo 3: Carica i File
 
@@ -92,7 +92,7 @@ elle.gi/
 Dopo il caricamento, il tuo repository dovrebbe apparire così:
 
 ```
-elle.gi/
+l.g/
 ├── index.html
 ├── chi-sono.html
 ├── metodo-efo.html
@@ -113,8 +113,8 @@ elle.gi/
 
 ```bash
 # 1. Clona il repository
-git clone https://github.com/[tuo-username]/elle.gi.git
-cd elle.gi
+git clone https://github.com/[tuo-username]/l.g.git
+cd l.g
 
 # 2. Copia tutti i file nella cartella
 
@@ -147,7 +147,7 @@ git push origin main
 
 - GitHub impiegherà 2-5 minuti per pubblicare il sito
 - Vedrai un messaggio verde con l'URL del tuo sito
-- L'URL sarà: `https://[tuo-username].github.io/elle.gi`
+- L'URL sarà: `https://[tuo-username].github.io/l.g`
 
 ### Passo 3: Verifica il Sito
 
@@ -411,6 +411,6 @@ Perfetto! Tutti i file sono stati creati. Ecco il riepilogo completo:
 5. **Testa il sito** all'URL fornito da GitHub
 
 ### 🎯 URL del Sito:
-Sarà disponibile a: `https://[tuo-username].github.io/elle.gi`
+Sarà disponibile a: `https://[tuo-username].github.io/l.g`
 
 Vuoi che ti guidi passo-passo nel caricamento su GitHub o hai domande? 🚀
