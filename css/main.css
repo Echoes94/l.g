@@ -2831,12 +2831,6 @@ section {
     background: linear-gradient(135deg, #0000FF 0%, #341948 100%);
 }
 
-.video-button::after {
-    content: ' 🎥';
-    margin-left: 8px;
-    font-size: 1.2em;
-}
-
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
