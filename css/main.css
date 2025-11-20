@@ -1580,6 +1580,11 @@ section {
     margin-bottom: var(--spacing-xs);
 }
 
+.level-rewards ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 .level-result {
     margin-top: var(--spacing-md);
     font-weight: 600;
