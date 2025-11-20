@@ -1,0 +1,1059 @@
+/* ===================================
+   L.G. - RESPONSIVE STYLESHEET
+   Mobile-First Approach
+   =================================== */
+
+/* ===================================
+   BREAKPOINTS
+   =================================== */
+/*
+   Mobile: < 768px (base styles)
+   Tablet: 768px - 1024px
+   Desktop: > 1024px
+*/
+
+/* ===================================
+   TABLET (768px - 1024px)
+   =================================== */
+@media screen and (max-width: 1024px) {
+    
+    /* Typography Adjustments */
+    html {
+        font-size: 15px;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Navigation */
+    .nav-links {
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-link {
+        font-size: 0.95rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        min-height: 80vh;
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-visual {
+        right: 5%;
+    }
+    
+    .circle-glow {
+        width: 300px;
+        height: 300px;
+    }
+    
+    /* Cards Grid */
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    /* Chi Sono Preview */
+    .preview-content {
+        gap: var(--spacing-md);
+    }
+    
+    /* Formazione Content */
+    .formazione-content {
+        gap: var(--spacing-md);
+    }
+    
+    /* Metodo Pillars */
+    .metodo-pillars {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    /* Video Testimonials - Tablet */
+    .testimonial-video {
+        padding-bottom: 75%; /* Mantiene 4:3 su tablet */
+    }
+    
+    .testimonial-summary {
+        margin-top: var(--spacing-md);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+    
+    /* Story Hero */
+    .story-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: var(--spacing-md);
+    }
+    
+    .story-hero-content {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .story-hero-image img {
+        max-width: 400px;
+    }
+    
+    /* Timeline */
+    .timeline-item {
+        grid-template-columns: 80px 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .timeline-item::before {
+        left: 40px;
+    }
+    
+    /* Metodo EFO Page */
+    .per-te-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .segnali-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .scenarios-grid {
+        gap: var(--spacing-md);
+    }
+    
+    .strade-grid {
+        gap: var(--spacing-md);
+    }
+    
+    /* Roadmap */
+    .roadmap-level {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Tables */
+    .confronto-table table {
+        font-size: 0.9rem;
+    }
+    
+    .confronto-table th,
+    .confronto-table td {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* ===================================
+   MOBILE (< 768px)
+   =================================== */
+@media screen and (max-width: 768px) {
+    
+    /* Typography */
+    html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+    
+    h3 {
+        font-size: clamp(1.35rem, 5vw, 1.75rem);
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    /* Spacing */
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+    
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Navigation - Mobile Menu */
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(14, 5, 15, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--spacing-lg) var(--spacing-md);
+        gap: var(--spacing-md);
+        transition: left var(--transition-medium);
+        z-index: 999;
+        border-top: 1px solid rgba(52, 25, 72, 0.5);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        font-size: 1.25rem;
+        padding: var(--spacing-sm) 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .cta-button-nav {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Hamburger Menu */
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    /* Buttons */
+    .cta-button,
+    .cta-button-secondary,
+    .cta-button-large {
+        padding: 0.875rem 1.75rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .cta-button-large {
+        padding: 1.25rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        min-height: 70vh;
+        padding: var(--spacing-lg) 0;
+        margin-top: 70px;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+    }
+    
+    .hero-visual {
+        display: none;
+    }
+    
+    /* Cards & Grids */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .card {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Chi Sono Preview */
+    .chi-sono-preview {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .preview-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .preview-text {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .preview-image {
+        order: -1;
+    }
+    
+    .image-wrapper img {
+        max-width: 100%;
+    }
+    
+    /* Formazione Section */
+    .formazione-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .credentials-list {
+        gap: var(--spacing-xs);
+    }
+    
+    .credential-item {
+        padding: var(--spacing-xs);
+        font-size: 0.95rem;
+    }
+    
+    .credential-icon {
+        font-size: 1.25rem;
+    }
+    
+    /* Metodo Preview */
+    .metodo-box {
+        padding: var(--spacing-md);
+    }
+    
+    .metodo-title {
+        font-size: 2rem;
+    }
+    
+    .metodo-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .metodo-pillars {
+        grid-template-columns: 1fr;
+    }
+    
+    .pillar {
+        padding: var(--spacing-sm);
+    }
+    
+    .pillar-number {
+        font-size: 1.5rem;
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Video Testimonials - Mobile */
+    .testimonial-video {
+        padding-bottom: 56.25%; /* Aspect ratio 16:9 per mobile */
+        margin-top: var(--spacing-sm);
+    }
+    
+    .testimonial-video iframe {
+        border-radius: 8px;
+    }
+    
+    /* Summary - Mobile */
+    .testimonial-summary {
+        margin-top: var(--spacing-sm);
+        padding-top: var(--spacing-sm);
+    }
+    
+    .testimonial-summary .testimonial-text {
+        font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .footer-brand,
+    .footer-links,
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .footer-links a,
+    .footer-contact a {
+        font-size: 0.95rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        padding-top: var(--spacing-sm);
+    }
+    
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+    
+    /* Story Page */
+    .story-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: var(--spacing-lg) 0;
+        margin-top: 70px;
+    }
+    
+    .story-hero-content {
+        text-align: center;
+    }
+    
+    .story-title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+    
+    .story-intro {
+        font-size: 1.1rem;
+    }
+    
+    .story-hero-image {
+        margin-top: var(--spacing-md);
+    }
+    
+    .story-hero-image img {
+        max-width: 100%;
+    }
+    
+    /* Timeline */
+    .timeline-section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 60px 1fr;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .timeline-item::before {
+        left: 30px;
+        top: 80px;
+        bottom: -40px;
+    }
+    
+    .timeline-number,
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .timeline-content {
+        padding: var(--spacing-md);
+    }
+    
+    .timeline-title {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-text p {
+        font-size: 0.95rem;
+    }
+    
+    .story-quote {
+        padding: var(--spacing-sm);
+        margin: var(--spacing-md) 0;
+        font-size: 1rem;
+    }
+    
+    /* Story CTA */
+    .cta-box {
+        padding: var(--spacing-md);
+    }
+    
+    /* Metodo EFO Page */
+    .metodo-hero {
+        min-height: 70vh;
+        padding: var(--spacing-lg) 0;
+        margin-top: 70px;
+    }
+    
+    .metodo-hero-title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+    
+    .metodo-hero-text {
+        font-size: 1.1rem;
+    }
+    
+    .metodo-hero-promise {
+        font-size: 1.15rem;
+    }
+    
+    /* Per Te Section */
+    .per-te-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .per-te-card {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Non Per Te */
+    .non-per-te-list {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .alignment-note {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Problema Section */
+    .segnali-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .segnale-card {
+        padding: var(--spacing-sm);
+    }
+    
+    .buona-notizia {
+        padding: var(--spacing-md);
+    }
+    
+    /* Paradosso */
+    .paradosso-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .verita-box {
+        padding: var(--spacing-md);
+    }
+    
+    /* Scenario */
+    .scenarios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .scenario-card {
+        padding: var(--spacing-md);
+    }
+    
+    /* Soluzione */
+    .soluzione-pillars {
+        padding: var(--spacing-md);
+    }
+    
+    .pillars-list {
+        gap: var(--spacing-sm);
+    }
+    
+    .pillar-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .dimensione-card {
+        padding: var(--spacing-md);
+    }
+    
+    .dimensione-number {
+        font-size: 2rem;
+    }
+    
+    .dimensione-card h4 {
+        font-size: 1.5rem;
+    }
+    
+    /* Roadmap */
+    .roadmap-intro {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .roadmap-level {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .level-header {
+        padding: var(--spacing-sm);
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .level-icon {
+        font-size: 1.5rem;
+    }
+    
+    .level-content {
+        padding: var(--spacing-md);
+    }
+    
+    .level-content h4 {
+        font-size: 1.25rem;
+    }
+    
+    .level-rewards {
+        padding: var(--spacing-sm);
+    }
+    
+    .roadmap-section-divider {
+        padding: var(--spacing-sm);
+    }
+    
+    .progress-bar {
+        padding: var(--spacing-md);
+    }
+    
+    /* Pausa */
+    .pausa-content {
+        padding: var(--spacing-md);
+    }
+    
+    .pausa-list {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Include */
+    .include-grid {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .include-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .bonus-section {
+        padding: var(--spacing-md);
+    }
+    
+    .bonus-list {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Investimento */
+    .investimento-breakdown {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .breakdown-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .pricing-box {
+        padding: var(--spacing-md);
+    }
+    
+    .pricing-original {
+        font-size: 2rem;
+    }
+    
+    .price-final {
+        font-size: 2rem;
+    }
+    
+    /* Disponibilità */
+    .disponibilita-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .disponibilita-status {
+        padding: var(--spacing-md);
+    }
+    
+    .status-item {
+        padding: var(--spacing-sm);
+        font-size: 0.95rem;
+    }
+    
+    .aumento-prezzo {
+        padding: var(--spacing-md);
+    }
+    
+    .urgenza-box {
+        padding: var(--spacing-md);
+    }
+    
+    /* Garanzia */
+    .garanzia-box {
+        padding: var(--spacing-md);
+    }
+    
+    .garanzia-list {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Confronto */
+    .confronto-tables {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .confronto-table {
+        overflow-x: auto;
+    }
+    
+    .confronto-table table {
+        font-size: 0.85rem;
+        min-width: 500px;
+    }
+    
+    .confronto-table th,
+    .confronto-table td {
+        padding: var(--spacing-xs);
+    }
+    
+    .unico-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .unico-item {
+        padding: var(--spacing-sm);
+    }
+    
+    /* FAQ */
+    .faq-list {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .faq-item {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .faq-question {
+        padding: var(--spacing-sm);
+        font-size: 1.1rem;
+    }
+    
+    .faq-answer {
+        padding: var(--spacing-sm);
+        font-size: 0.95rem;
+    }
+    
+    /* CTA Finale */
+    .strade-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .strada-card {
+        padding: var(--spacing-md);
+    }
+    
+    .chiamata-box {
+        padding: var(--spacing-md);
+    }
+    
+    .chiamata-list {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .primo-passo {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .come-funziona {
+        padding: var(--spacing-sm);
+    }
+    
+    .contatti-alternativi {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Chiusura & PS */
+    .chiusura-content,
+    .ps-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .chiusura-quote {
+        font-size: 1.35rem;
+    }
+    
+    .chiusura-manifesto {
+        padding: var(--spacing-md);
+    }
+    
+    .chiusura-manifesto p {
+        font-size: 1.1rem;
+    }
+    
+    .ps-numeri {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+/* ===================================
+   SMALL MOBILE (< 480px)
+   =================================== */
+@media screen and (max-width: 480px) {
+    
+    /* Typography */
+    html {
+        font-size: 13px;
+    }
+    
+    h1 {
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+    
+    h3 {
+        font-size: clamp(1.25rem, 6vw, 1.5rem);
+    }
+    
+    /* Spacing */
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 3.5rem;
+    }
+    
+    /* Buttons */
+    .cta-button,
+    .cta-button-secondary,
+    .cta-button-large {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Logo */
+    .logo {
+        font-size: 1.75rem;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* Cards */
+    .card-icon {
+        font-size: 2.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+    
+    /* Preview */
+    .preview-name {
+        font-size: 1.75rem;
+    }
+    
+    .preview-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    /* Metodo Box */
+    .metodo-title {
+        font-size: 1.75rem;
+    }
+    
+    .metodo-subtitle {
+        font-size: 1.35rem;
+    }
+    
+    .metodo-tagline {
+        font-size: 1rem;
+    }
+    
+    /* Timeline */
+    .timeline-item {
+        grid-template-columns: 50px 1fr;
+    }
+    
+    .timeline-item::before {
+        left: 25px;
+    }
+    
+    .timeline-number,
+    .timeline-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.35rem;
+    }
+    
+    /* Testimonials Video - Small Mobile */
+    .testimonial-video {
+        padding-bottom: 56.25%; /* Mantiene 16:9 */
+    }
+    
+    .testimonial-name {
+        font-size: 1.1rem;
+    }
+    
+    .testimonial-stars {
+        font-size: 0.9rem;
+    }
+    
+    /* Summary - Small Mobile */
+    .testimonial-summary .testimonial-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    /* Pricing */
+    .pricing-original,
+    .price-final {
+        font-size: 1.75rem;
+    }
+    
+    .price-highlight {
+        font-size: 1.5rem;
+    }
+    
+    /* Tables */
+    .confronto-table table {
+        font-size: 0.8rem;
+        min-width: 450px;
+    }
+    
+    /* Social Links */
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-links svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ===================================
+   LANDSCAPE ORIENTATION (Mobile)
+   =================================== */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    
+    .hero,
+    .metodo-hero,
+    .story-hero {
+        min-height: auto;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .nav-links {
+        height: calc(100vh - 60px);
+        padding: var(--spacing-md);
+    }
+    
+    .nav-link {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    /* Video Testimonials - Landscape */
+    .testimonial-video {
+        padding-bottom: 56.25%;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+    
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    .navbar,
+    .hamburger,
+    .cta-button,
+    .cta-button-nav,
+    .footer,
+    .social-links,
+    .testimonial-video {
+        display: none !important;
+    }
+    
+    .testimonial-summary {
+        display: block !important;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}
+
+/* ===================================
+   HIGH CONTRAST MODE
+   =================================== */
+@media (prefers-contrast: high) {
+    
+    :root {
+        --color-text-light: #FFFFFF;
+        --color-bg-primary: #000000;
+    }
+    
+    .card,
+    .testimonial-card,
+    .timeline-content {
+        border-width: 3px;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    .testimonial-summary {
+        border-top-width: 2px;
+    }
+}
+
+/* ===================================
+   DARK MODE OVERRIDE (if needed)
+   =================================== */
+@media (prefers-color-scheme: light) {
+    /* Il sito è già dark by design, quindi non serve override */
+}
